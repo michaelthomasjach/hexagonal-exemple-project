@@ -4,6 +4,8 @@ Un exemple **volontairement minuscule** d'architecture hexagonale (« ports et a
 
 Le métier : **construire une voiture** avec **4 roues**, **1 volant** et **1 moteur**, puis la démarrer et tourner le volant. Rien de plus, pour que la structure reste lisible. Chaque fichier commence par un commentaire qui explique son rôle dans l'architecture.
 
+> 📄 **Débutant ?** Le guide illustré [`docs/architecture-hexagonale-expliquee.pdf`](docs/architecture-hexagonale-expliquee.pdf) (11 pages) explique, schémas à l'appui, le rôle de chaque dossier et de chaque fichier, et suit pas à pas les échanges entre les couches quand on construit, démarre et conduit la voiture.
+
 ## L'idée en une image
 
 ```
@@ -67,6 +69,8 @@ src/
 │       ├── persistence/InMemoryCarRepository.ts  ← ADAPTATEUR SORTANT : stockage en mémoire
 │       └── id/CryptoIdGenerator.ts               ← ADAPTATEUR SORTANT : UUID via node:crypto
 └── main.ts                          ← racine de composition : branche les adaptateurs aux cas d'usage
+docs/
+└── architecture-hexagonale-expliquee.pdf  ← le guide illustré pour débutant
 tests/
 ├── domain/Car.test.ts               ← règles métier, sans aucune infrastructure
 └── application/BuildCarService.test.ts  ← cas d'usage avec de fausses implémentations des ports
