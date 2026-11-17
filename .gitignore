@@ -1,0 +1,11 @@
+# Dépendances installées par npm (recréées par "npm install").
+node_modules/
+
+# JavaScript compilé par "npm run build" (recréé à chaque compilation).
+dist/
+
+# Journaux et fichiers de l'éditeur.
+*.log
+.DS_Store
+.vscode/
+.idea/

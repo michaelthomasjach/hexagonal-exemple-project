@@ -1,0 +1,21 @@
+{
+  // Configuration du compilateur TypeScript.
+  // - "NodeNext" : modules ES natifs de Node.js (d'où les imports qui finissent par ".js" dans le code source).
+  // - "strict" : toutes les vérifications de types activées, pour que le compilateur attrape les erreurs au plus tôt.
+  // - Seul le dossier "src" est compilé dans "dist" ; les tests sont exécutés directement par tsx.
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "rootDir": "src",
+    "outDir": "dist",
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "sourceMap": true
+  },
+  "include": ["src"]
+}
